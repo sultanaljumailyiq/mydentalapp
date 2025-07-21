@@ -1,0 +1,80 @@
+/* Arabic Font Support - Must be first */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Classes */
+.font-arabic {
+  font-family: "Cairo", "Tajawal", Arial, sans-serif;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:text-left {
+  text-align: left;
+}
+
+[dir="rtl"] .rtl\:mr-auto {
+  margin-right: auto;
+}
+
+[dir="rtl"] .rtl\:ml-auto {
+  margin-left: auto;
+}
+
+/* Dark Mode Support */
+.dark {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.dark .bg-white {
+  background-color: #374151;
+}
+
+.dark .text-gray-900 {
+  color: #f9fafb;
+}
+
+.dark .text-gray-600 {
+  color: #d1d5db;
+}
+
+.dark .border-gray-200 {
+  border-color: #4b5563;
+}
+
+/* Iraqi-specific customizations */
+.iraqi-theme {
+  --primary-color: #007c3e;
+  --secondary-color: #ce1126;
+  --accent-color: #ffd700;
+}
+
+/* Custom scrollbar for Arabic content */
+.font-arabic::-webkit-scrollbar {
+  width: 8px;
+}
+
+.font-arabic::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.font-arabic::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.font-arabic::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
